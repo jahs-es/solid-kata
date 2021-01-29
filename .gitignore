@@ -1,0 +1,9 @@
+target/
+dip/*.iml
+srp/*.iml
+isp/*.iml
+lsp/*.iml
+ocp/*.iml
+solid-kata.iml
+/.idea/
+
