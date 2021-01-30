@@ -18,3 +18,5 @@ forced to depend on interfaces they do not use.
  depend on abstractions.
 
 The objective is modify each of the examples in order to not violate the corresponding SOLID principle.
+
+## You can see solution adopted to every problem in a separated branch.
