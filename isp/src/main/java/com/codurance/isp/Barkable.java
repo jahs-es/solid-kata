@@ -1,5 +1,5 @@
 package com.codurance.isp;
 
-public interface Barkeable {
+public interface Barkable {
     void bark();
 }
