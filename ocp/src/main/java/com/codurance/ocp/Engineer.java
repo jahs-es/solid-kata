@@ -1,12 +1,14 @@
 package com.codurance.ocp;
 
-public class Engineer extends Employee {
-    Engineer(int salary, int bonus) {
-        super(salary, bonus);
+public class Engineer implements IPayAmount {
+    int salary;
+
+    Engineer(int salary) {
+        this.salary = salary;
     }
 
     @Override
-    int payAmount() {
+    public int payAmount() {
         return salary;
     }
 }

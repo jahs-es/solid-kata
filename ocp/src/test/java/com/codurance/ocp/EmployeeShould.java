@@ -10,15 +10,15 @@ class EmployeeShould {
 
     @Test
     public void not_add_bonus_to_the_engineer_pay_amount() {
-        Employee employee = new Engineer(SALARY, BONUS);
-        assertThat(employee.payAmount())
+        Engineer engineer = new Engineer(SALARY);
+        assertThat(engineer.payAmount())
                 .isEqualTo(SALARY);
     }
 
     @Test
     public void add_bonus_to_the_manager_pay_amount() {
-        Employee employee = new Manager(SALARY, BONUS);
-        assertThat(employee.payAmount())
+        Manager manager = new Manager(SALARY, BONUS);
+        assertThat(manager.payAmount())
                 .isEqualTo(SALARY+BONUS);
     }
 }
