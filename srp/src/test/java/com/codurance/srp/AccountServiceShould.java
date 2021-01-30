@@ -40,9 +40,12 @@ public class AccountServiceShould {
 
     private AccountService accountService;
 
+    private PrintStatementService printStatementService;
+
     @Before
     public void setUp() {
-        accountService = new AccountService(transactionRepository, clock, console);
+        printStatementService = new PrintStatementService(console);
+        accountService = new AccountService(transactionRepository, clock, printStatementService);
         given(clock.today()).willReturn(TODAY);
     }
 
