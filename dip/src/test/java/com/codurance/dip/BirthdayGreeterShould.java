@@ -1,5 +1,6 @@
 package com.codurance.dip;
 
+import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
@@ -26,10 +27,15 @@ public class BirthdayGreeterShould {
     @Mock
     private Clock clock;
 
-    @InjectMocks
+    private EmailSender emailSender;
+
     private BirthdayGreeter birthdayGreeter;
 
-
+    @Before
+    public void setUp(){
+        emailSender = new EmailSender();
+        birthdayGreeter = new BirthdayGreeter(employeeRepository,emailSender,clock);
+    }
     private ByteArrayOutputStream consoleContent = new ByteArrayOutputStream();
 
     @Test
