@@ -1,6 +1,7 @@
 # SOLID design principles
 
 ElectricCar doesn't properly substitute Vehicle because of the method fillUpWithFuell().
+
 PetrolCar doesn't properly substitute Vehicle because of the method chargeBattery().
 
 Solution : 
